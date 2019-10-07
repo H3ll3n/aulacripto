@@ -111,8 +111,8 @@ func (s *SmartContract) inserirAvaliacao(stub shim.ChaincodeStubInterface, args 
 	avalid := args[0]
 	questao := args[1]
 
-	//cria um registro de avaliacao (não respondida, nota igual a zero)
-	var avaliacao = Avaliacao{Questao: questao, Resposta: "", Nota: 0}
+	//cria um registro de avaliacao (não respondida, nota igual a dez)
+	var avaliacao = Avaliacao{Questao: questao, Resposta: "", Nota: 10}
 
 	//encapsula o tipo avaliacao em um vetor de bytes (marshall)
 	avaliacaoAsBytes, _ := json.Marshal(avaliacao)
